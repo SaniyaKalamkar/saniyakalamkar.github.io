@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saniya Kalamkar</title>
+<meta name="description" content="Saniya Kalamkar — Computer Science student at the University of Michigan working on resilient infrastructure, power systems, and distributed systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="glow">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+</div>
+
+<nav id="nav">
+  <div class="navbar">
+    <div class="navlinks">
+      <a href="#top" class="mark">Saniya Kalamkar</a>
+      <a href="#research">Research</a>
+      <a href="#opensource">Open Source</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/></svg>
+      <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="display:none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main id="top">
+  <div class="wrap">
+    <section class="hero">
+      <figure class="polaroid p1" id="poly1">
+        <div class="img-slot has-photo"><img src="images/diag.jpg" alt="The Diag on U-M's Ann Arbor campus, with Burton Memorial Tower in the background" loading="lazy"></div>
+        <figcaption>The Diag, Ann Arbor</figcaption>
+      </figure>
+      <figure class="polaroid p2" id="poly2">
+        <div class="img-slot has-photo"><img src="images/eecs.jpg" alt="EECS building at the University of Michigan, home to OptiML Lab" loading="lazy"></div>
+        <figcaption>EECS Building</figcaption>
+      </figure>
+      <figure class="polaroid p3" id="poly3">
+        <div class="img-slot has-photo"><img src="images/solar-car.jpg" alt="Michigan Solar Car Team's race vehicle on the road during competition" loading="lazy"></div>
+        <figcaption>Solar Car Team</figcaption>
+      </figure>
+
+      <h1 class="name" id="nameHeadline"><span id="nameText"></span><span class="cursor" id="cursor"></span></h1>
+      <p class="role-line" id="roleLine">University of Michigan — B.S. Computer Science</p>
+      <p class="tagline" id="tagline">I build the software that keeps power grids, data centers, and other critical infrastructure standing up under stress.</p>
+      <div class="hero-links" id="heroLinks">
+        <a href="mailto:skalamka@umich.edu">Email me</a>
+        <a href="https://github.com/SaniyaKalamkar" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-head"><span class="section-dot"></span><h2 class="section-title">About</h2></div>
+      <p class="reveal">I'm a Computer Science student at the University of Michigan, minoring in Data Science and Energy Science &amp; Policy. Most of my work sits at the intersection of distributed systems and physical infrastructure — modeling how power grids respond to failure, and building the control systems that keep them stable.</p>
+      <p class="reveal" style="transition-delay: 0.1s;">Right now that means simulating how large AI training workloads strain the grid, and helping design formally verified controllers that keep data centers compliant during voltage faults. Outside of research, I mentor students through WISE Residence Program and GEECS (Girls in Electrical Engineering and Computer Science), and contribute to open-source infrastructure tooling.</p>
+      <p class="reveal" style="transition-delay: 0.2s;">Outside of work, I'm usually deep in a mystery novel, hunting down the best coffee shop in whatever city I'm in, or getting dragged on a walk by my dog.</p>
+    </section>
+
+    <section id="research">
+      <div class="section-head"><span class="section-dot"></span><h2 class="section-title">Research</h2></div>
+
+      <details class="panel" open>
+        <summary>
+          <div class="panel-heading">
+            <h3>Synthesizing Voltage Ride-Through Controllers for Data Centers</h3>
+            <span class="panel-meta">ACM DXConf · 2026 (to appear)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="panel-body">
+          <p>Part of the Digital Transformation of Industrial Infrastructure (ACM EIGDX) group. We built SolVRT, a formal methods system for synthesizing voltage ride-through (VRT) controllers that keep data centers grid-code compliant during faults.</p>
+          <ul>
+            <li>Ran controller experiments in the ANDES power system simulator across multiple grid topologies</li>
+            <li>Injected faults for every low-voltage ride-through band under Texas ERCOT grid code</li>
+            <li>Analyzed controller performance and produced the result visualizations used in the paper</li>
+            <li>Presented this work as a poster at multiple research symposiums</li>
+          </ul>
+          <div class="stack"><span>ANDES</span><span>Formal Methods</span><span>Power Systems</span><span>ERCOT Grid Code</span></div>
+          <a class="panel-link" href="https://arxiv.org/abs/2608.07289" target="_blank" rel="noopener">Read the paper →</a>
+        </div>
+      </details>
+
+      <details class="panel">
+        <summary>
+          <div class="panel-heading">
+            <h3>Grid Stability Under AI Workloads</h3>
+            <span class="panel-meta">OptiML Lab · Dec 2025 – Present</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="panel-body">
+          <p>Modeling IEEE distribution bus systems to understand how large-scale AI training workloads stress power grid stability, and simulating what happens when multiple data centers draw load at once.</p>
+          <ul>
+            <li>Built an interactive simulation platform to visualize voltage behavior, load allocation, and bus topology changes</li>
+            <li>Implementing voltage stabilization strategies — feedback optimization, droop control, and reactive power tuning — to hold the grid steady during load surges</li>
+            <li>Presented this work as a poster at multiple research symposiums</li>
+          </ul>
+          <div class="stack"><span>OpenDSS</span><span>Julia</span><span>Python</span><span>React</span><span>Power Systems</span></div>
+          <a class="panel-link" href="https://gpu2grid.io/live/" target="_blank" rel="noopener">View the live simulation →</a>
+        </div>
+      </details>
+    </section>
+
+    <section id="opensource">
+      <div class="section-head"><span class="section-dot"></span><h2 class="section-title">Open Source</h2></div>
+      <details class="panel">
+        <summary>
+          <div class="panel-heading">
+            <h3>Numaflow</h3>
+            <span class="panel-meta">Intuit · Jul 2024 – Present</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="panel-body">
+          <p>Contributing to Numaflow, a Kubernetes-native event processing platform, focused on improving system stability and performance.</p>
+          <ul>
+            <li>Analyze open issues and implement fixes in Rust</li>
+            <li>Working directly in a production-grade distributed systems codebase</li>
+          </ul>
+          <div class="stack"><span>Rust</span><span>Kubernetes</span><span>Distributed Systems</span></div>
+          <a class="panel-link" href="https://github.com/numaproj/numaflow" target="_blank" rel="noopener">View the project →</a>
+        </div>
+      </details>
+    </section>
+
+    <section id="projects">
+      <div class="section-head"><span class="section-dot"></span><h2 class="section-title">Projects</h2></div>
+      <div class="tabbar">
+        <button class="tab-btn active" data-tab="security">Security &amp; Networking</button>
+        <button class="tab-btn" data-tab="distsys">Distributed Systems</button>
+        <button class="tab-btn" data-tab="appliedai">Applied AI</button>
+      </div>
+
+      <div class="tab-panel active" id="security">
+        <div class="proj-item">
+          <span class="proj-tag">Cryptography</span>
+          <h3>Cryptographic Attacks</h3>
+          <p>Implemented a length-extension attack against a vulnerable hash-based authentication scheme, generated MD5 hash collisions to produce two programs with identical hashes but different behavior, built a padding-oracle attack against CBC-mode encryption to decrypt ciphertext without the key, and forged RSA signatures by exploiting lenient PKCS#1 v1.5 padding validation.</p>
+        </div>
+        <div class="proj-item">
+          <span class="proj-tag">Web Security</span>
+          <h3>CSRF &amp; XSS</h3>
+          <p>Built and defended against cross-site request forgery and cross-site scripting attacks in a realistic web application setting.</p>
+        </div>
+        <div class="proj-item">
+          <span class="proj-tag">Networking</span>
+          <h3>Networking &amp; Packet Analysis</h3>
+          <p>Explored network-layer security as part of the course's networking unit. Wrote Python socket scripts to connect to remote servers, handle communication over TCP/IP, and automate protocol interactions. Used Wireshark to capture and inspect live traffic, diagnosing protocol behaviors and tracing packet integrity issues back to their root cause. Evaluated network services for vulnerabilities and reasoned about threat models in a local virtual lab environment.</p>
+          <div class="stack"><span>Python Sockets</span><span>TCP/IP</span><span>Wireshark</span><span>Threat Modeling</span></div>
+        </div>
+        <div class="proj-item">
+          <span class="proj-tag">Application Security</span>
+          <h3>AppSec Project</h3>
+          <p>Identified and exploited application-layer vulnerabilities in a target web application, then implemented fixes to harden it against the same attacks — including input validation, safer session handling, and tightening access control logic.</p>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="distsys">
+        <div class="proj-item">
+          <span class="proj-tag">Replication</span>
+          <h3>Primary/Backup Replication</h3>
+          <p>Built a replicated service using a primary/backup architecture to keep state consistent across server failures.</p>
+        </div>
+        <div class="proj-item">
+          <span class="proj-tag">Consensus</span>
+          <h3>Paxos Consensus</h3>
+          <p>Implemented the Paxos consensus protocol to let a group of servers agree on a sequence of operations despite failures.</p>
+        </div>
+        <div class="proj-item">
+          <span class="proj-tag">Sharding</span>
+          <h3>Sharded Key-Value Store</h3>
+          <p>Built a distributed key-value store made of multiple Paxos groups, each responsible for its own subset of keys, coordinated by a "ShardMaster" group that manages how keys are assigned across shards.</p>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="appliedai">
+        <div class="proj-item">
+          <span class="proj-tag">Cloudflare Workers AI</span>
+          <h3>Cloudflare AI Chatbot</h3>
+          <p>An AI-powered chat application built on Cloudflare Workers AI with persistent memory. Runs Llama 3.3 (70B Instruct) as the underlying LLM, uses a Durable Object per session to coordinate conversation state, and persists chat history so context carries across messages instead of resetting each turn.</p>
+          <div class="stack"><span>Cloudflare Workers</span><span>Durable Objects</span><span>Llama 3.3</span><span>TypeScript</span></div>
+          <a class="panel-link" href="https://github.com/SaniyaKalamkar/cf_ai_chatbot" target="_blank" rel="noopener">View the project →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-head"><span class="section-dot"></span><h2 class="section-title">Experience</h2></div>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-head"><span class="tl-badge">SN</span><span class="tl-date">May 2025 – Jul 2025</span></div>
+          <h3>Software Engineer Intern, SiteNotes</h3>
+          <p>Built features for a cross-platform mobile app (React Native, Firebase) supporting 1,000+ civil engineers in the field, and integrated Gemini for AI-assisted note-taking on job sites. Worked across the stack — from Firebase data models and offline sync to the React Native UI.</p>
+        </div>
+        <div class="tl-item reveal" style="transition-delay: 0.1s;">
+          <div class="tl-head"><span class="tl-badge">MS</span><span class="tl-date">Sep 2023 – Dec 2025</span></div>
+          <h3>Strategy Team, Michigan Solar Car Project Team</h3>
+          <p>Built optimization strategies and race-day data analysis for a 100+ member engineering team designing solar-powered race vehicles. Modeled energy consumption and weather/route variables to plan speed strategy for competition.</p>
+        </div>
+        <div class="tl-item reveal" style="transition-delay: 0.2s;">
+          <div class="tl-head"><span class="tl-badge">AC</span><span class="tl-date">Jun 2022 – Aug 2022</span></div>
+          <h3>Software Engineer Intern, Alameda County IT Department</h3>
+          <p>Owned a data migration project end to end — moved records from a legacy DB2 system to SQL Server and built a searchable interface for archived case files. Wrote migration and validation scripts to ensure data integrity across the transfer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head"><span class="section-dot"></span><h2 class="section-title">Contact</h2></div>
+      <div class="contact-links">
+        <a class="pill email" href="mailto:skalamka@umich.edu">
+          skalamka@umich.edu
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+        <a class="pill github" href="https://github.com/SaniyaKalamkar" target="_blank" rel="noopener">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+        <a class="pill linkedin" href="https://www.linkedin.com/in/saniya-kalamkar-649713232/" target="_blank" rel="noopener">
+          LinkedIn
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer> @ 2026 Saniya Kalamkar. Ann Arbor, MI.</footer>
+
+<script>
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const iconSun = document.getElementById('iconSun');
+  const iconMoon = document.getElementById('iconMoon');
+
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+      iconSun.style.display = 'none';
+      iconMoon.style.display = 'block';
+    } else {
+      root.removeAttribute('data-theme');
+      iconSun.style.display = 'block';
+      iconMoon.style.display = 'none';
+    }
+  }
+  setTheme('light');
+  toggle.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    setTheme(isDark ? 'light' : 'dark');
+  });
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 8));
+
+  // Scroll-triggered reveal for About + Experience content (mirrors the hero's fade-in)
+  const revealEls = document.querySelectorAll('.reveal');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    revealEls.forEach(el => el.classList.add('in'));
+  } else {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => revealObserver.observe(el));
+  }
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  const nameText = document.getElementById('nameText');
+  const cursor = document.getElementById('cursor');
+  const roleLine = document.getElementById('roleLine');
+  const tagline = document.getElementById('tagline');
+  const heroLinks = document.getElementById('heroLinks');
+  const polaroids = [document.getElementById('poly1'), document.getElementById('poly2'), document.getElementById('poly3')];
+
+  const nameStr = 'Saniya Kalamkar';
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function typeInto(el, str, speed, onDone) {
+    if (reduceMotion) { el.textContent = str; onDone && onDone(); return; }
+    let i = 0;
+    (function step() {
+      if (i <= str.length) { el.textContent = str.slice(0, i); i++; setTimeout(step, speed); }
+      else { onDone && onDone(); }
+    })();
+  }
+
+  typeInto(nameText, nameStr, 55, () => {
+    cursor.style.display = 'none';
+    roleLine.classList.add('in');
+    setTimeout(() => {
+      tagline.classList.add('in');
+      heroLinks.classList.add('in');
+      polaroids.forEach((p, i) => setTimeout(() => p.classList.add('in'), i * 150));
+    }, 200);
+  });
+</script>
+
+</body>
+</html>
