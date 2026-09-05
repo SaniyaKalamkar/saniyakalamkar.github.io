@@ -22,7 +22,6 @@
     <div class="navlinks">
       <a href="#top" class="mark">Saniya Kalamkar</a>
       <a href="#research">Research</a>
-      <a href="#opensource">Open Source</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
@@ -68,6 +67,7 @@
 
     <section id="research">
       <div class="section-head"><span class="section-dot"></span><h2 class="section-title">Research</h2></div>
+      <p class="reveal" style="color: var(--ink-soft); max-width: 62ch; margin: -8px 0 26px;">Data center power demand is rising fast and unevenly — a 2024 Virginia grid fault tripped 1,500 MW of data center load at once, most of it offline for hours. Grid codes now require riding through voltage sags instead of disconnecting, but those codes are informal and hard to formalize, and hand-tuned controllers offer no compliance guarantee. My research tackles this from two angles: synthesizing formally verified ride-through controllers, and modeling how synchronized GPU workloads strain distribution grids that weren't built for them.</p>
 
       <details class="panel" open>
         <summary>
@@ -111,61 +111,15 @@
       </details>
     </section>
 
-    <section id="opensource">
-      <div class="section-head"><span class="section-dot"></span><h2 class="section-title">Open Source</h2></div>
-      <details class="panel">
-        <summary>
-          <div class="panel-heading">
-            <h3>Numaflow</h3>
-            <span class="panel-meta">Intuit · Jul 2024 – Present</span>
-          </div>
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg>
-        </summary>
-        <div class="panel-body">
-          <p>Contributing to Numaflow, a Kubernetes-native event processing platform, focused on improving system stability and performance.</p>
-          <ul>
-            <li>Analyze open issues and implement fixes in Rust</li>
-            <li>Working directly in a production-grade distributed systems codebase</li>
-          </ul>
-          <div class="stack"><span>Rust</span><span>Kubernetes</span><span>Distributed Systems</span></div>
-          <a class="panel-link" href="https://github.com/numaproj/numaflow" target="_blank" rel="noopener">View the project →</a>
-        </div>
-      </details>
-    </section>
-
     <section id="projects">
       <div class="section-head"><span class="section-dot"></span><h2 class="section-title">Projects</h2></div>
       <div class="tabbar">
-        <button class="tab-btn active" data-tab="security">Security &amp; Networking</button>
-        <button class="tab-btn" data-tab="distsys">Distributed Systems</button>
+        <button class="tab-btn active" data-tab="distsys">Distributed Systems</button>
         <button class="tab-btn" data-tab="appliedai">Applied AI</button>
+        <button class="tab-btn" data-tab="security">Security &amp; Networking</button>
       </div>
 
-      <div class="tab-panel active" id="security">
-        <div class="proj-item">
-          <span class="proj-tag">Cryptography</span>
-          <h3>Cryptographic Attacks</h3>
-          <p>Implemented a length-extension attack against a vulnerable hash-based authentication scheme, generated MD5 hash collisions to produce two programs with identical hashes but different behavior, built a padding-oracle attack against CBC-mode encryption to decrypt ciphertext without the key, and forged RSA signatures by exploiting lenient PKCS#1 v1.5 padding validation.</p>
-        </div>
-        <div class="proj-item">
-          <span class="proj-tag">Web Security</span>
-          <h3>CSRF &amp; XSS</h3>
-          <p>Built and defended against cross-site request forgery and cross-site scripting attacks in a realistic web application setting.</p>
-        </div>
-        <div class="proj-item">
-          <span class="proj-tag">Networking</span>
-          <h3>Networking &amp; Packet Analysis</h3>
-          <p>Explored network-layer security as part of the course's networking unit. Wrote Python socket scripts to connect to remote servers, handle communication over TCP/IP, and automate protocol interactions. Used Wireshark to capture and inspect live traffic, diagnosing protocol behaviors and tracing packet integrity issues back to their root cause. Evaluated network services for vulnerabilities and reasoned about threat models in a local virtual lab environment.</p>
-          <div class="stack"><span>Python Sockets</span><span>TCP/IP</span><span>Wireshark</span><span>Threat Modeling</span></div>
-        </div>
-        <div class="proj-item">
-          <span class="proj-tag">Application Security</span>
-          <h3>AppSec Project</h3>
-          <p>Identified and exploited application-layer vulnerabilities in a target web application, then implemented fixes to harden it against the same attacks — including input validation, safer session handling, and tightening access control logic.</p>
-        </div>
-      </div>
-
-      <div class="tab-panel" id="distsys">
+      <div class="tab-panel active" id="distsys">
         <div class="proj-item">
           <span class="proj-tag">Replication</span>
           <h3>Primary/Backup Replication</h3>
@@ -192,12 +146,42 @@
           <a class="panel-link" href="https://github.com/SaniyaKalamkar/cf_ai_chatbot" target="_blank" rel="noopener">View the project →</a>
         </div>
       </div>
+
+      <div class="tab-panel" id="security">
+        <div class="proj-item">
+          <span class="proj-tag">Cryptography</span>
+          <h3>Cryptographic Attacks</h3>
+          <p>Implemented a length-extension attack against a vulnerable hash-based authentication scheme, generated MD5 hash collisions to produce two programs with identical hashes but different behavior, built a padding-oracle attack against CBC-mode encryption to decrypt ciphertext without the key, and forged RSA signatures by exploiting lenient PKCS#1 v1.5 padding validation.</p>
+        </div>
+        <div class="proj-item">
+          <span class="proj-tag">Web Security</span>
+          <h3>CSRF &amp; XSS</h3>
+          <p>Built and defended against cross-site request forgery and cross-site scripting attacks in a realistic web application setting.</p>
+        </div>
+        <div class="proj-item">
+          <span class="proj-tag">Networking</span>
+          <h3>Networking &amp; Packet Analysis</h3>
+          <p>Explored network-layer security as part of the course's networking unit. Wrote Python socket scripts to connect to remote servers, handle communication over TCP/IP, and automate protocol interactions. Used Wireshark to capture and inspect live traffic, diagnosing protocol behaviors and tracing packet integrity issues back to their root cause. Evaluated network services for vulnerabilities and reasoned about threat models in a local virtual lab environment.</p>
+          <div class="stack"><span>Python Sockets</span><span>TCP/IP</span><span>Wireshark</span><span>Threat Modeling</span></div>
+        </div>
+        <div class="proj-item">
+          <span class="proj-tag">Application Security</span>
+          <h3>AppSec Project</h3>
+          <p>Identified and exploited application-layer vulnerabilities in a target web application, then implemented fixes to harden it against the same attacks — including input validation, safer session handling, and tightening access control logic.</p>
+        </div>
+      </div>
     </section>
 
     <section id="experience">
       <div class="section-head"><span class="section-dot"></span><h2 class="section-title">Experience</h2></div>
       <div class="timeline">
         <div class="tl-item reveal">
+          <div class="tl-head"><span class="tl-badge">NF</span><span class="tl-date">Jul 2024 – Present</span></div>
+          <h3>Open Source Contributor, Numaflow (Intuit)</h3>
+          <p>Contributing to Numaflow, a Kubernetes-native event processing platform, focused on improving system stability and performance. Analyze open issues and ship fixes in Rust within a production-grade distributed systems codebase.</p>
+          <a class="panel-link" href="https://github.com/numaproj/numaflow" target="_blank" rel="noopener">View the project →</a>
+        </div>
+        <div class="tl-item reveal" style="transition-delay: 0.05s;">
           <div class="tl-head"><span class="tl-badge">SN</span><span class="tl-date">May 2025 – Jul 2025</span></div>
           <h3>Software Engineer Intern, SiteNotes</h3>
           <p>Built features for a cross-platform mobile app (React Native, Firebase) supporting 1,000+ civil engineers in the field, and integrated Gemini for AI-assisted note-taking on job sites. Worked across the stack — from Firebase data models and offline sync to the React Native UI.</p>
@@ -235,7 +219,7 @@
   </div>
 </main>
 
-<footer> @ 2026 Saniya Kalamkar. Ann Arbor, MI.</footer>
+<footer>© 2026 Saniya Kalamkar. Ann Arbor, MI.</footer>
 
 <script>
   const root = document.documentElement;
@@ -262,6 +246,38 @@
 
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 8));
+
+  // Scroll-spy: highlight the nav link for the section currently in view
+  const spySectionIds = ['research', 'projects', 'experience', 'contact'];
+  const navLinkMap = {};
+  spySectionIds.forEach(id => {
+    const link = document.querySelector(`.navlinks a[href="#${id}"]`);
+    if (link) navLinkMap[id] = link;
+  });
+
+  function setActiveNavLink(id) {
+    Object.entries(navLinkMap).forEach(([sectionId, link]) => {
+      if (sectionId === id) {
+        link.classList.add('active-link');
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.classList.remove('active-link');
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    const spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) setActiveNavLink(entry.target.id);
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    spySectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) spyObserver.observe(el);
+    });
+  }
 
   // Scroll-triggered reveal for About + Experience content (mirrors the hero's fade-in)
   const revealEls = document.querySelectorAll('.reveal');
