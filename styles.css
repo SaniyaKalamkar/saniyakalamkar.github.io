@@ -125,6 +125,10 @@
     font-size: 0.92rem;
   }
   .navlinks a:not(.mark):hover { color: var(--accent-2); }
+  .navlinks a.active-link:not(.mark) {
+    color: var(--accent);
+    font-weight: 600;
+  }
 
   .theme-toggle {
     position: absolute;
@@ -286,7 +290,6 @@
     flex-shrink: 0;
   }
   #experience .section-dot { background: var(--accent-2); }
-  #opensource .section-dot { background: var(--accent-3); }
   #projects .section-dot { background: var(--accent-3); }
   #contact .section-dot { background: var(--accent); }
 
@@ -334,8 +337,6 @@
     margin-bottom: 14px;
     padding: 20px 22px;
   }
-  #opensource details.panel { border-left-color: var(--accent-3); }
-
   details.panel summary {
     cursor: pointer;
     list-style: none;
