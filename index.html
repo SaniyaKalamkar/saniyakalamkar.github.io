@@ -53,8 +53,10 @@
       <p class="role-line" id="roleLine">University of Michigan — B.S. Computer Science</p>
       <p class="tagline" id="tagline">I build the software that keeps power grids, data centers, and other critical infrastructure standing up under stress.</p>
       <div class="hero-links" id="heroLinks">
-        <a href="mailto:skalamka@umich.edu">Email me</a>
-        <a href="https://github.com/SaniyaKalamkar" target="_blank" rel="noopener">GitHub</a>
+        <a class="pill email" href="mailto:skalamka@umich.edu">
+          Email me
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
       </div>
     </section>
 
@@ -69,11 +71,15 @@
       <div class="section-head"><span class="section-dot"></span><h2 class="section-title">Research</h2></div>
       <p class="reveal" style="color: var(--ink-soft); max-width: 62ch; margin: -8px 0 26px;">Data center power demand is rising fast and unevenly — a 2024 Virginia grid fault tripped 1,500 MW of data center load at once, most of it offline for hours. Grid codes now require riding through voltage sags instead of disconnecting, but those codes are informal and hard to formalize, and hand-tuned controllers offer no compliance guarantee. My research tackles this from two angles: synthesizing formally verified ride-through controllers, and modeling how synchronized GPU workloads strain distribution grids that weren't built for them.</p>
 
-      <details class="panel" open>
+      <details class="panel panel-featured" id="paper-solvrt" open>
         <summary>
           <div class="panel-heading">
-            <h3>Synthesizing Voltage Ride-Through Controllers for Data Centers</h3>
+            <h3>Synthesizing Voltage Ride-Through Controllers for Data Centers <span style="display:inline-block; font-size:0.62rem; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; color: var(--bg); background: var(--accent); padding: 2px 8px; border-radius: 999px; vertical-align: middle; margin-left: 6px;">To Appear</span></h3>
             <span class="panel-meta">ACM DXConf · 2026 (to appear)</span>
+            <a href="https://arxiv.org/abs/2608.07289" target="_blank" rel="noopener" onclick="event.stopPropagation();" class="paper-btn">
+              Read the paper
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </a>
           </div>
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
@@ -86,7 +92,6 @@
             <li>Presented this work as a poster at multiple research symposiums</li>
           </ul>
           <div class="stack"><span>ANDES</span><span>Formal Methods</span><span>Power Systems</span><span>ERCOT Grid Code</span></div>
-          <a class="panel-link" href="https://arxiv.org/abs/2608.07289" target="_blank" rel="noopener">Read the paper →</a>
         </div>
       </details>
 
@@ -270,7 +275,7 @@
   if ('IntersectionObserver' in window) {
     const spyObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) setActiveNavLink(entry.target.id);
+        if (entry.isIntersecting && window.scrollY > 60) setActiveNavLink(entry.target.id);
       });
     }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
     spySectionIds.forEach(id => {
